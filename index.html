@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOW GOOD IS YOUR PROBLEM SOLVING?</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .bar {
+            width: 50px;
+            margin: 5px;
+            text-align: center;
+            color: white;
+            display: inline-block;
+        }
+        .bar.red { background-color: red; }
+        .bar.blue { background-color: blue; }
+        .bar.grey { background-color: grey; }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #results, #results * {
+                visibility: visible;
+            }
+            #results {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>HOW GOOD IS YOUR PROBLEM SOLVING?</h1>
+    <p>For each statement, click the button in the column that best describes you. Please answer questions as you actually are (rather than how you think you should be), and don't worry if some questions seem to score in the "wrong direction." When you are finished, please click the "Submit" button at the bottom of the test.</p>
+    <form id="survey-form">
+        <ul>
+            <li>
+                <h4>1. Once I choose a solution, I develop an implementation plan with the sequence of events necessary for completion.</h4>
+                <label><input type="radio" name="question1" value="1"> Not at all</label>
+                <label><input type="radio" name="question1" value="2"> Rarely</label>
+                <label><input type="radio" name="question1" value="3"> Sometimes</label>
+                <label><input type="radio" name="question1" value="4"> Often</label>
+                <label><input type="radio" name="question1" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>2. After a solution has been implemented, I immediately look for ways to improve the idea and avoid future problems.</h4>
+                <label><input type="radio" name="question2" value="1"> Not at all</label>
+                <label><input type="radio" name="question2" value="2"> Rarely</label>
+                <label><input type="radio" name="question2" value="3"> Sometimes</label>
+                <label><input type="radio" name="question2" value="4"> Often</label>
+                <label><input type="radio" name="question2" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>3. To avoid asking the wrong question, I take care to define each problem carefully before trying to solve it.</h4>
+                <label><input type="radio" name="question3" value="1"> Not at all</label>
+                <label><input type="radio" name="question3" value="2"> Rarely</label>
+                <label><input type="radio" name="question3" value="3"> Sometimes</label>
+                <label><input type="radio" name="question3" value="4"> Often</label>
+                <label><input type="radio" name="question3" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>4. I strive to look at problems from different perspectives and generate multiple solutions.</h4>
+                <label><input type="radio" name="question4" value="1"> Not at all</label>
+                <label><input type="radio" name="question4" value="2"> Rarely</label>
+                <label><input type="radio" name="question4" value="3"> Sometimes</label>
+                <label><input type="radio" name="question4" value="4"> Often</label>
+                <label><input type="radio" name="question4" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>5. I try to address the political issues and other consequences of the change I’m proposing so that others will understand and support my solution.</h4>
+                <label><input type="radio" name="question5" value="1"> Not at all</label>
+                <label><input type="radio" name="question5" value="2"> Rarely</label>
+                <label><input type="radio" name="question5" value="3"> Sometimes</label>
+                <label><input type="radio" name="question5" value="4"> Often</label>
+                <label><input type="radio" name="question5" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>6. I evaluate potential solutions carefully and thoroughly against a predefined standard.</h4>
+                <label><input type="radio" name="question6" value="1"> Not at all</label>
+                <label><input type="radio" name="question6" value="2"> Rarely</label>
+                <label><input type="radio" name="question6" value="3"> Sometimes</label>
+                <label><input type="radio" name="question6" value="4"> Often</label>
+                <label><input type="radio" name="question6" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>7. I systematically search for issues that may become problems in the future.</h4>
+                <label><input type="radio" name="question7" value="1"> Not at all</label>
+                <label><input type="radio" name="question7" value="2"> Rarely</label>
+                <label><input type="radio" name="question7" value="3"> Sometimes</label>
+                <label><input type="radio" name="question7" value="4"> Often</label>
+                <label><input type="radio" name="question7" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>8. When I decide on a solution, I make it happen – no matter what opposition I may face.</h4>
+                <label><input type="radio" name="question8" value="5"> Not at all</label>
+                <label><input type="radio" name="question8" value="4"> Rarely</label>
+                <label><input type="radio" name="question8" value="3"> Sometimes</label>
+                <label><input type="radio" name="question8" value="2"> Often</label>
+                <label><input type="radio" name="question8" value="1"> Very Often</label>
+            </li>
+            <li>
+                <h4>9. I find that small problems often become much bigger in scope, and thus very difficult to solve.</h4>
+                <label><input type="radio" name="question9" value="5"> Not at all</label>
+                <label><input type="radio" name="question9" value="4"> Rarely</label>
+                <label><input type="radio" name="question9" value="3"> Sometimes</label>
+                <label><input type="radio" name="question9" value="2"> Often</label>
+                <label><input type="radio" name="question9" value="1"> Very Often</label>
+            </li>
+            <li>
+                <h4>10. I ask myself lots of different questions about the nature of the problem.</h4>
+                <label><input type="radio" name="question10" value="1"> Not at all</label>
+                <label><input type="radio" name="question10" value="2"> Rarely</label>
+                <label><input type="radio" name="question10" value="3"> Sometimes</label>
+                <label><input type="radio" name="question10" value="4"> Often</label>
+                <label><input type="radio" name="question10" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>11. After my solution is implemented, I relax and focus again on my regular duties.</h4>
+                <label><input type="radio" name="question11" value="5"> Not at all</label>
+                <label><input type="radio" name="question11" value="4"> Rarely</label>
+                <label><input type="radio" name="question11" value="3"> Sometimes</label>
+                <label><input type="radio" name="question11" value="2"> Often</label>
+                <label><input type="radio" name="question11" value="1"> Very Often</label>
+            </li>
+            <li>
+                <h4>12. I focus on keeping current operations running smoothly and hope that problems don’t appear.</h4>
+                <label><input type="radio" name="question12" value="5"> Not at all</label>
+                <label><input type="radio" name="question12" value="4"> Rarely</label>
+                <label><input type="radio" name="question12" value="3"> Sometimes</label>
+                <label><input type="radio" name="question12" value="2"> Often</label>
+                <label><input type="radio" name="question12" value="1"> Very Often</label>
+            </li>
+            <li>
+                <h4>13. I evaluate potential solutions as I think of them.</h4>
+                <label><input type="radio" name="question13" value="5"> Not at all</label>
+                <label><input type="radio" name="question13" value="4"> Rarely</label>
+                <label><input type="radio" name="question13" value="3"> Sometimes</label>
+                <label><input type="radio" name="question13" value="2"> Often</label>
+                <label><input type="radio" name="question13" value="1"> Very Often</label>
+            </li>
+            <li>
+                <h4>14. When I need to find a solution to a problem, I usually have all of the information I need to solve it.</h4>
+                <label><input type="radio" name="question14" value="5"> Not at all</label>
+                <label><input type="radio" name="question14" value="4"> Rarely</label>
+                <label><input type="radio" name="question14" value="3"> Sometimes</label>
+                <label><input type="radio" name="question14" value="2"> Often</label>
+                <label><input type="radio" name="question14" value="1"> Very Often</label>
+            </li>
+            <li>
+                <h4>15. When evaluating solutions, I take time to think about how I should choose between options.</h4>
+                <label><input type="radio" name="question15" value="1"> Not at all</label>
+                <label><input type="radio" name="question15" value="2"> Rarely</label>
+                <label><input type="radio" name="question15" value="3"> Sometimes</label>
+                <label><input type="radio" name="question15" value="4"> Often</label>
+                <label><input type="radio" name="question15" value="5"> Very Often</label>
+            </li>
+            <li>
+                <h4>16. Making a decision is the end of my problem-solving process.</h4>
+                <label><input type="radio" name="question16" value="5"> Not at all</label>
+                <label><input type="radio" name="question16" value="4"> Rarely</label>
+                <label><input type="radio" name="question16" value="3"> Sometimes</label>
+                <label><input type="radio" name="question16" value="2"> Often</label>
+                <label><input type="radio" name="question16" value="1"> Very Often</label>
+            </li>            
+        </ul>
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    <div id="results"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+
